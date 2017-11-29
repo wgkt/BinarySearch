@@ -1,6 +1,10 @@
 import java.util.*;
-
-public class asgn9
+/**
+*  Class to perform a binary search on an array.
+*
+*
+*/
+public class BinarySearch
 {
 	public static void main(String[] args)
 	{
@@ -19,6 +23,9 @@ public class asgn9
 	
 	binarySearch(data);
 	}
+/**
+* Binary Search method
+*/
 	
 public static void binarySearch(ArrayList<Integer> data)
 {
@@ -29,19 +36,19 @@ public static void binarySearch(ArrayList<Integer> data)
 	{ 		
 		for (int i = 0; i < data.size(); i++)
 		{
-		pos = (low + high) / 2;
-		if ( data.get(pos) == 58 || data.get(pos) == 85)
-		{found = true;}
-		else if ( data.get(pos)<58 || data.get(pos) == 85)
-		{low = pos + 1;}
-		else
-		{high = pos - 1;}
+			pos = (low + high) / 2;
+			if ( data.get(pos) == 58 || data.get(pos) == 85)
+				{found = true;}
+			else if ( data.get(pos)<58 || data.get(pos) == 85)
+				{low = pos + 1;}
+			else
+				{high = pos - 1;}
 		
 		System.out.println(data.get(i) + " False");
 
 		} // end of for
 	if (found)
-	{System.out.println(data.get(pos) + " True");}
+		{System.out.println(data.get(pos) + " True");}
 	} // end of while
    } // end of binarySearch
 } // end of class
